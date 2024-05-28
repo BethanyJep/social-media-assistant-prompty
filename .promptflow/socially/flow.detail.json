@@ -1,0 +1,285 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {},
+      "output": {
+        "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29",
+      "root_run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2024-05-28T10:12:40.345705Z",
+      "end_time": "2024-05-28T10:12:45.198186Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "SociallyPrompt",
+          "type": "Function",
+          "inputs": {},
+          "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
+          "start_time": 1716880360.345705,
+          "end_time": 1716880365.190188,
+          "error": null,
+          "children": [
+            {
+              "name": "Prompty.__call__",
+              "type": "Function",
+              "inputs": {},
+              "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
+              "start_time": 1716880360.346758,
+              "end_time": 1716880365.190188,
+              "error": null,
+              "children": [
+                {
+                  "name": "convert_prompt_template",
+                  "type": "Function",
+                  "inputs": {
+                    "template": "\nsystem:\nYou are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media.\n\nuser:\n{{post_type}} post for the blog post titled \"{{blog_title}}\" found at {{blog_link}} with the call to action \"{{call_to_action}}\".\n",
+                    "inputs": {}
+                  },
+                  "output": [
+                    {
+                      "role": "system",
+                      "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
+                    },
+                    {
+                      "role": "user",
+                      "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
+                    }
+                  ],
+                  "start_time": 1716880361.367467,
+                  "end_time": 1716880361.377512,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "a151cad4-db32-4aca-a00f-170837b2175b",
+                  "id": "452ccdd9-6176-4842-822a-6c4f13f847d2",
+                  "function": "convert_prompt_template"
+                },
+                {
+                  "name": "send_request_to_llm",
+                  "type": "Function",
+                  "inputs": {
+                    "client": "<openai.lib.azure.AzureOpenAI object at 0x000001418C399E70>",
+                    "api": "chat",
+                    "parameters": {
+                      "max_tokens": 3000,
+                      "extra_headers": {
+                        "ms-azure-ai-promptflow-called-from": "promptflow-core"
+                      },
+                      "model": "gpt-35-turbo",
+                      "messages": [
+                        {
+                          "role": "system",
+                          "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
+                        },
+                        {
+                          "role": "user",
+                          "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
+                        }
+                      ]
+                    }
+                  },
+                  "output": {
+                    "id": "chatcmpl-9To6tJoiAzBgylLIrVUfLttVlWhpO",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1716891163,
+                    "model": "gpt-35-turbo",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 103,
+                      "prompt_tokens": 159,
+                      "total_tokens": 262
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1716880361.413735,
+                  "end_time": 1716880365.189187,
+                  "error": null,
+                  "children": [
+                    {
+                      "name": "openai_chat",
+                      "type": "LLM",
+                      "inputs": {
+                        "max_tokens": 3000,
+                        "model": "gpt-35-turbo",
+                        "messages": [
+                          {
+                            "role": "system",
+                            "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
+                          },
+                          {
+                            "role": "user",
+                            "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
+                          }
+                        ]
+                      },
+                      "output": {
+                        "id": "chatcmpl-9To6tJoiAzBgylLIrVUfLttVlWhpO",
+                        "choices": [
+                          {
+                            "finish_reason": "stop",
+                            "index": 0,
+                            "logprobs": null,
+                            "message": {
+                              "content": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
+                              "role": "assistant",
+                              "function_call": null,
+                              "tool_calls": null
+                            },
+                            "content_filter_results": {
+                              "hate": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "self_harm": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "sexual": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "violence": {
+                                "filtered": false,
+                                "severity": "safe"
+                              }
+                            }
+                          }
+                        ],
+                        "created": 1716891163,
+                        "model": "gpt-35-turbo",
+                        "object": "chat.completion",
+                        "system_fingerprint": null,
+                        "usage": {
+                          "completion_tokens": 103,
+                          "prompt_tokens": 159,
+                          "total_tokens": 262
+                        },
+                        "prompt_filter_results": [
+                          {
+                            "prompt_index": 0,
+                            "content_filter_results": {
+                              "hate": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "self_harm": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "sexual": {
+                                "filtered": false,
+                                "severity": "safe"
+                              },
+                              "violence": {
+                                "filtered": false,
+                                "severity": "safe"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "start_time": 1716880361.419299,
+                      "end_time": 1716880365.186188,
+                      "error": null,
+                      "children": [],
+                      "node_name": null,
+                      "parent_id": "088ba9e8-85fc-4907-8243-aa4c49c21a61",
+                      "id": "bd02c1ee-f78f-47cb-a858-6da73db6e1df",
+                      "function": "openai.resources.chat.completions.Completions.create"
+                    }
+                  ],
+                  "node_name": null,
+                  "parent_id": "a151cad4-db32-4aca-a00f-170837b2175b",
+                  "id": "088ba9e8-85fc-4907-8243-aa4c49c21a61",
+                  "function": "send_request_to_llm"
+                }
+              ],
+              "node_name": null,
+              "parent_id": "4547daef-df84-4106-bcf3-5f821626fa21",
+              "id": "a151cad4-db32-4aca-a00f-170837b2175b",
+              "function": "Prompty.__call__"
+            }
+          ],
+          "node_name": null,
+          "parent_id": "",
+          "id": "4547daef-df84-4106-bcf3-5f821626fa21",
+          "function": "Prompty.__call__"
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 4.852481
+      },
+      "result": {
+        "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!"
+      },
+      "upload_metrics": false,
+      "otel_trace_id": "316f536cd40037afec84e3f1dd622e28",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": []
+}

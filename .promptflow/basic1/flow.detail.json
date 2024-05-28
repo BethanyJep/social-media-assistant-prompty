@@ -1,0 +1,178 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "b48e38b0-aa3a-4788-991f-cce70237e4d2_0",
+      "status": "Failed",
+      "error": {
+        "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+        "messageFormat": "",
+        "messageParameters": {},
+        "code": "SystemError",
+        "innerError": {
+          "code": "AuthenticationError",
+          "innerError": null
+        },
+        "debugInfo": {
+          "type": "AuthenticationError",
+          "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+          "stackTrace": "Traceback (most recent call last):\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\executor\\_script_executor.py\", line 108, in _exec_line\n    output = self._func(**inputs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 415, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 415, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_flow.py\", line 396, in __call__\n    response = traced_llm_call(api_client, self._model.api, params)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 415, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 152, in send_request_to_llm\n    result = client.chat.completions.create(**parameters)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 88, in wrapper\n    return f(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 415, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_utils\\_utils.py\", line 277, in wrapper\n    return func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\resources\\chat\\completions.py\", line 590, in create\n    return self._post(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 1240, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 921, in request\n    return self._request(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 1020, in _request\n    raise self._make_status_error_from_response(err.response) from None\n",
+          "innerException": null
+        }
+      },
+      "inputs": {},
+      "output": null,
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "b48e38b0-aa3a-4788-991f-cce70237e4d2",
+      "root_run_id": "b48e38b0-aa3a-4788-991f-cce70237e4d2",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2024-05-28T10:05:24.480984Z",
+      "end_time": "2024-05-28T10:06:17.419211Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "ExamplePrompt",
+          "type": "Function",
+          "inputs": {},
+          "output": null,
+          "start_time": 1716879924.481989,
+          "end_time": 1716879977.367775,
+          "error": {
+            "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+            "type": "AuthenticationError"
+          },
+          "children": [
+            {
+              "name": "Prompty.__call__",
+              "type": "Function",
+              "inputs": {},
+              "output": null,
+              "start_time": 1716879924.483982,
+              "end_time": 1716879977.331074,
+              "error": {
+                "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+                "type": "AuthenticationError"
+              },
+              "children": [
+                {
+                  "name": "convert_prompt_template",
+                  "type": "Function",
+                  "inputs": {
+                    "template": "\nsystem:\nYou are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping {{firstName}} to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to {{firstName}}:\n{{context}}\n\nuser:\n{{question}}\n",
+                    "inputs": {}
+                  },
+                  "output": [
+                    {
+                      "role": "system",
+                      "content": "You are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping  to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to :"
+                    },
+                    {
+                      "role": "user",
+                      "content": ""
+                    }
+                  ],
+                  "start_time": 1716879934.866279,
+                  "end_time": 1716879934.875284,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "845eb323-c5a4-4f8e-aa08-b7870bee2213",
+                  "id": "7e8fb4e0-7412-4543-8453-4b6b1c5376c1",
+                  "function": "convert_prompt_template"
+                },
+                {
+                  "name": "send_request_to_llm",
+                  "type": "Function",
+                  "inputs": {
+                    "client": "<openai.lib.azure.AzureOpenAI object at 0x000002006EC9DE40>",
+                    "api": "chat",
+                    "parameters": {
+                      "max_tokens": 3000,
+                      "extra_headers": {
+                        "ms-azure-ai-promptflow-called-from": "promptflow-core"
+                      },
+                      "model": "gpt-35-turbo",
+                      "messages": [
+                        {
+                          "role": "system",
+                          "content": "You are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping  to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to :"
+                        },
+                        {
+                          "role": "user",
+                          "content": ""
+                        }
+                      ]
+                    }
+                  },
+                  "output": null,
+                  "start_time": 1716879934.908817,
+                  "end_time": 1716879977.259546,
+                  "error": {
+                    "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+                    "type": "AuthenticationError"
+                  },
+                  "children": [
+                    {
+                      "name": "openai_chat",
+                      "type": "LLM",
+                      "inputs": {
+                        "max_tokens": 3000,
+                        "model": "gpt-35-turbo",
+                        "messages": [
+                          {
+                            "role": "system",
+                            "content": "You are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping  to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to :"
+                          },
+                          {
+                            "role": "user",
+                            "content": ""
+                          }
+                        ]
+                      },
+                      "output": null,
+                      "start_time": 1716879934.912851,
+                      "end_time": 1716879977.107996,
+                      "error": {
+                        "message": "Error code: 401 - {'error': {'code': 'PermissionDenied', 'message': 'Principal does not have access to API/Operation.'}}",
+                        "type": "AuthenticationError"
+                      },
+                      "children": [],
+                      "node_name": null,
+                      "parent_id": "78f91407-f5fd-4ee1-b0e6-97501395b038",
+                      "id": "33e9ca45-8cd5-4e90-9d6c-1b52d63cedf7",
+                      "function": "openai.resources.chat.completions.Completions.create"
+                    }
+                  ],
+                  "node_name": null,
+                  "parent_id": "845eb323-c5a4-4f8e-aa08-b7870bee2213",
+                  "id": "78f91407-f5fd-4ee1-b0e6-97501395b038",
+                  "function": "send_request_to_llm"
+                }
+              ],
+              "node_name": null,
+              "parent_id": "8acd902e-e161-49e3-b7dd-be5742509e2c",
+              "id": "845eb323-c5a4-4f8e-aa08-b7870bee2213",
+              "function": "Prompty.__call__"
+            }
+          ],
+          "node_name": null,
+          "parent_id": "",
+          "id": "8acd902e-e161-49e3-b7dd-be5742509e2c",
+          "function": "Prompty.__call__"
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 52.938227
+      },
+      "result": null,
+      "upload_metrics": false,
+      "otel_trace_id": "c06ce4e6f7391ac6eff893102ba20a45",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": []
+}
