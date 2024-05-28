@@ -1,47 +1,90 @@
 {
   "flow_runs": [
     {
-      "run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29_0",
-      "status": "Completed",
-      "error": null,
-      "inputs": {},
-      "output": {
-        "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!"
+      "run_id": "e16415b6-f575-4fe7-b0f7-eae8e743f2d7_0",
+      "status": "Failed",
+      "error": {
+        "message": "Execution failure in '_traced_sync.<locals>.wrapped': (WrappedOpenAIError) OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+        "messageFormat": "Execution failure in '{func_name}': {error_type_and_message}",
+        "messageParameters": {
+          "func_name": "_traced_sync.<locals>.wrapped",
+          "error_type_and_message": "(WrappedOpenAIError) OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]"
+        },
+        "referenceCode": "Unknown",
+        "code": "UserError",
+        "innerError": {
+          "code": "ScriptExecutionError",
+          "innerError": null
+        },
+        "additionalInfo": [
+          {
+            "type": "FlexFlowExecutionErrorDetails",
+            "info": {
+              "type": "WrappedOpenAIError",
+              "message": "OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+              "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_transports\\default.py\", line 67, in map_httpcore_exceptions\n    yield\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_transports\\default.py\", line 231, in handle_request\n    resp = self._pool.handle_request(req)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpcore\\_sync\\connection_pool.py\", line 215, in handle_request\n    raise UnsupportedProtocol(\nhttpcore.UnsupportedProtocol: Request URL is missing an 'http://' or 'https://' protocol.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 952, in _request\n    response = self._client.send(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_client.py\", line 915, in send\n    response = self._send_handling_auth(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_client.py\", line 943, in _send_handling_auth\n    response = self._send_handling_redirects(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_client.py\", line 980, in _send_handling_redirects\n    response = self._send_single_request(request)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_client.py\", line 1016, in _send_single_request\n    response = transport.handle_request(request)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_transports\\default.py\", line 230, in handle_request\n    with map_httpcore_exceptions():\n  File \"C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\contextlib.py\", line 153, in __exit__\n    self.gen.throw(typ, value, traceback)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\httpx\\_transports\\default.py\", line 84, in map_httpcore_exceptions\n    raise mapped_exc(message) from exc\nhttpx.UnsupportedProtocol: Request URL is missing an 'http://' or 'https://' protocol.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 1003, in wrapper\n    return func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_flow.py\", line 451, in __call__\n    response = send_request_to_llm(api_client, self._model.api, params)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 197, in send_request_to_llm\n    result = client.chat.completions.create(**parameters)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 88, in wrapper\n    return f(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 513, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_utils\\_utils.py\", line 277, in wrapper\n    return func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\resources\\chat\\completions.py\", line 590, in create\n    return self._post(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 1240, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 921, in request\n    return self._request(\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\openai\\_base_client.py\", line 986, in _request\n    raise APIConnectionError(request=request) from err\nopenai.APIConnectionError: Connection error.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 513, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\tracing\\_trace.py\", line 513, in wrapped\n    output = func(*args, **kwargs)\n  File \"C:\\Users\\bethanycheum\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 1022, in wrapper\n    raise WrappedOpenAIError(e)\npromptflow.core._errors.WrappedOpenAIError: OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]\n"
+            }
+          }
+        ],
+        "debugInfo": {
+          "type": "ScriptExecutionError",
+          "message": "Execution failure in '_traced_sync.<locals>.wrapped': (WrappedOpenAIError) OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+          "stackTrace": "Traceback (most recent call last):\n",
+          "innerException": null
+        }
       },
+      "inputs": {
+        "blog_title": "LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel",
+        "blog_link": "https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252",
+        "call_to_action": "GitHub Sample Code at https://github.com/BethanyJep/Swahili-Tutor",
+        "post_type": "Twitter"
+      },
+      "output": null,
       "metrics": null,
       "request": null,
-      "parent_run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29",
-      "root_run_id": "7f104455-f438-45ee-b78e-da3d44ed3d29",
+      "parent_run_id": "e16415b6-f575-4fe7-b0f7-eae8e743f2d7",
+      "root_run_id": "e16415b6-f575-4fe7-b0f7-eae8e743f2d7",
       "source_run_id": null,
       "flow_id": "default_flow_id",
-      "start_time": "2024-05-28T10:12:40.345705Z",
-      "end_time": "2024-05-28T10:12:45.198186Z",
+      "start_time": "2024-05-28T11:48:18.762872Z",
+      "end_time": "2024-05-28T11:48:18.811844Z",
       "index": 0,
       "api_calls": [
         {
           "name": "SociallyPrompt",
           "type": "Function",
           "inputs": {},
-          "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
-          "start_time": 1716880360.345705,
-          "end_time": 1716880365.190188,
-          "error": null,
+          "output": null,
+          "start_time": 1716886098.762872,
+          "end_time": 1716886098.806292,
+          "error": {
+            "message": "OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+            "type": "WrappedOpenAIError"
+          },
           "children": [
             {
-              "name": "Prompty.__call__",
+              "name": "Prompty",
               "type": "Function",
               "inputs": {},
-              "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
-              "start_time": 1716880360.346758,
-              "end_time": 1716880365.190188,
-              "error": null,
+              "output": null,
+              "start_time": 1716886098.763415,
+              "end_time": 1716886098.804676,
+              "error": {
+                "message": "OpenAI API hits APIConnectionError: Connection error. [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+                "type": "WrappedOpenAIError"
+              },
               "children": [
                 {
                   "name": "convert_prompt_template",
                   "type": "Function",
                   "inputs": {
                     "template": "\nsystem:\nYou are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media.\n\nuser:\n{{post_type}} post for the blog post titled \"{{blog_title}}\" found at {{blog_link}} with the call to action \"{{call_to_action}}\".\n",
-                    "inputs": {}
+                    "inputs": {
+                      "blog_title": "LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel",
+                      "blog_link": "https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252",
+                      "call_to_action": "GitHub Sample Code at https://github.com/BethanyJep/Swahili-Tutor",
+                      "post_type": "Twitter"
+                    }
                   },
                   "output": [
                     {
@@ -50,234 +93,71 @@
                     },
                     {
                       "role": "user",
-                      "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
+                      "content": "Twitter post for the blog post titled \"LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel\" found at https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252 with the call to action \"GitHub Sample Code at https://github.com/BethanyJep/Swahili-Tutor\"."
                     }
                   ],
-                  "start_time": 1716880361.367467,
-                  "end_time": 1716880361.377512,
+                  "start_time": 1716886098.764474,
+                  "end_time": 1716886098.769792,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "a151cad4-db32-4aca-a00f-170837b2175b",
-                  "id": "452ccdd9-6176-4842-822a-6c4f13f847d2",
+                  "parent_id": "fec68024-0a7c-4be7-816c-123ca691dec9",
+                  "id": "5579e343-0681-48fa-b3e0-44240c0f85ff",
                   "function": "convert_prompt_template"
                 },
                 {
-                  "name": "send_request_to_llm",
-                  "type": "Function",
+                  "name": "openai_chat",
+                  "type": "LLM",
                   "inputs": {
-                    "client": "<openai.lib.azure.AzureOpenAI object at 0x000001418C399E70>",
-                    "api": "chat",
-                    "parameters": {
-                      "max_tokens": 3000,
-                      "extra_headers": {
-                        "ms-azure-ai-promptflow-called-from": "promptflow-core"
-                      },
-                      "model": "gpt-35-turbo",
-                      "messages": [
-                        {
-                          "role": "system",
-                          "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
-                        },
-                        {
-                          "role": "user",
-                          "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
-                        }
-                      ]
-                    }
-                  },
-                  "output": {
-                    "id": "chatcmpl-9To6tJoiAzBgylLIrVUfLttVlWhpO",
-                    "choices": [
-                      {
-                        "finish_reason": "stop",
-                        "index": 0,
-                        "logprobs": null,
-                        "message": {
-                          "content": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
-                          "role": "assistant",
-                          "function_call": null,
-                          "tool_calls": null
-                        },
-                        "content_filter_results": {
-                          "hate": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "self_harm": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "sexual": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "violence": {
-                            "filtered": false,
-                            "severity": "safe"
-                          }
-                        }
-                      }
-                    ],
-                    "created": 1716891163,
+                    "max_tokens": 3000,
+                    "temperature": 0.9,
                     "model": "gpt-35-turbo",
-                    "object": "chat.completion",
-                    "system_fingerprint": null,
-                    "usage": {
-                      "completion_tokens": 103,
-                      "prompt_tokens": 159,
-                      "total_tokens": 262
-                    },
-                    "prompt_filter_results": [
+                    "messages": [
                       {
-                        "prompt_index": 0,
-                        "content_filter_results": {
-                          "hate": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "self_harm": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "sexual": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "violence": {
-                            "filtered": false,
-                            "severity": "safe"
-                          }
-                        }
+                        "role": "system",
+                        "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
+                      },
+                      {
+                        "role": "user",
+                        "content": "Twitter post for the blog post titled \"LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel\" found at https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252 with the call to action \"GitHub Sample Code at https://github.com/BethanyJep/Swahili-Tutor\"."
                       }
                     ]
                   },
-                  "start_time": 1716880361.413735,
-                  "end_time": 1716880365.189187,
-                  "error": null,
-                  "children": [
-                    {
-                      "name": "openai_chat",
-                      "type": "LLM",
-                      "inputs": {
-                        "max_tokens": 3000,
-                        "model": "gpt-35-turbo",
-                        "messages": [
-                          {
-                            "role": "system",
-                            "content": "You are an Social Media AI assistant who helps people create engaging content for Twitter. As the assistant, \nyou keep the tweets concise - remember that 280-character limit! Inject enthusiasm into your posts! \nUse relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis.\n\n# Context\nI am an AI assistant designed to help you create engaging Twitter and LinkedIn posts. I can help you create posts for a variety of topics, including technology, education, and more. I can also help you create posts for blog posts, articles, and other content you want to share on social media."
-                          },
-                          {
-                            "role": "user",
-                            "content": "post for the blog post titled \"\" found at  with the call to action \"\"."
-                          }
-                        ]
-                      },
-                      "output": {
-                        "id": "chatcmpl-9To6tJoiAzBgylLIrVUfLttVlWhpO",
-                        "choices": [
-                          {
-                            "finish_reason": "stop",
-                            "index": 0,
-                            "logprobs": null,
-                            "message": {
-                              "content": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!",
-                              "role": "assistant",
-                              "function_call": null,
-                              "tool_calls": null
-                            },
-                            "content_filter_results": {
-                              "hate": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "self_harm": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "sexual": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "violence": {
-                                "filtered": false,
-                                "severity": "safe"
-                              }
-                            }
-                          }
-                        ],
-                        "created": 1716891163,
-                        "model": "gpt-35-turbo",
-                        "object": "chat.completion",
-                        "system_fingerprint": null,
-                        "usage": {
-                          "completion_tokens": 103,
-                          "prompt_tokens": 159,
-                          "total_tokens": 262
-                        },
-                        "prompt_filter_results": [
-                          {
-                            "prompt_index": 0,
-                            "content_filter_results": {
-                              "hate": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "self_harm": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "sexual": {
-                                "filtered": false,
-                                "severity": "safe"
-                              },
-                              "violence": {
-                                "filtered": false,
-                                "severity": "safe"
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      "start_time": 1716880361.419299,
-                      "end_time": 1716880365.186188,
-                      "error": null,
-                      "children": [],
-                      "node_name": null,
-                      "parent_id": "088ba9e8-85fc-4907-8243-aa4c49c21a61",
-                      "id": "bd02c1ee-f78f-47cb-a858-6da73db6e1df",
-                      "function": "openai.resources.chat.completions.Completions.create"
-                    }
-                  ],
+                  "output": null,
+                  "start_time": 1716886098.788417,
+                  "end_time": 1716886098.796939,
+                  "error": {
+                    "message": "Connection error.",
+                    "type": "APIConnectionError"
+                  },
+                  "children": [],
                   "node_name": null,
-                  "parent_id": "a151cad4-db32-4aca-a00f-170837b2175b",
-                  "id": "088ba9e8-85fc-4907-8243-aa4c49c21a61",
-                  "function": "send_request_to_llm"
+                  "parent_id": "fec68024-0a7c-4be7-816c-123ca691dec9",
+                  "id": "9329f7b1-0089-40af-a18f-70453f7f38e7",
+                  "function": "openai.resources.chat.completions.Completions.create"
                 }
               ],
               "node_name": null,
-              "parent_id": "4547daef-df84-4106-bcf3-5f821626fa21",
-              "id": "a151cad4-db32-4aca-a00f-170837b2175b",
-              "function": "Prompty.__call__"
+              "parent_id": "f18299fd-fd6c-493c-b73c-36c51fb99812",
+              "id": "fec68024-0a7c-4be7-816c-123ca691dec9",
+              "function": "Prompty"
             }
           ],
           "node_name": null,
           "parent_id": "",
-          "id": "4547daef-df84-4106-bcf3-5f821626fa21",
-          "function": "Prompty.__call__"
+          "id": "f18299fd-fd6c-493c-b73c-36c51fb99812",
+          "function": "Prompty"
         }
       ],
       "name": "",
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 4.852481
+        "duration": 0.048972
       },
-      "result": {
-        "output": "Here's a tweet for the blog post titled \"Mindfulness: The Importance of Being Present\" found at [insert link], with the call to action \"Start being more present today!\".\n\n\"Ready to improve your mindfulness and truly live in the moment? Our latest blog post explores the importance of being present in our daily lives. Start being more present today! [insert link] #mindfulness #presence #meditation\" \n\nDon't forget to add relevant hashtags to increase visibility for your post. Good luck!"
-      },
+      "result": null,
       "upload_metrics": false,
-      "otel_trace_id": "316f536cd40037afec84e3f1dd622e28",
+      "otel_trace_id": "0x26fc5607d688c47bd3b1bb64a75a9355",
       "message_format": "basic"
     }
   ],

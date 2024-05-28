@@ -7,11 +7,12 @@ model:
   api: chat
   configuration:
     type: azure_openai
-    azure_endpoint: ${env:AZURE_OPENAI_KEY}
+    azure_endpoint: "${env:AZURE_OPENAI_ENDPOINT}"
     azure_deployment: gpt-35-turbo
-    api_key: ${env:AZURE_OPENAI_KEY}
+    api_key: "${env:AZURE_OPENAI_KEY}"
   parameters:
     max_tokens: 3000
+    temperature: 0.9
 sample:
   blog_title: LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel
   blog_link: https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252
