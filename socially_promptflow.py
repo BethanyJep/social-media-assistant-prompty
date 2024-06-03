@@ -1,6 +1,8 @@
 import json
 from promptflow.core import tool
 from promptflow.core import Prompty
+from promptflow.client import PFClient
+from promptflow.connections import AzureOpenAIConnection, OpenAIConnection
 
 from pathlib import Path
 folder = Path(__file__).parent.absolute().as_posix()
