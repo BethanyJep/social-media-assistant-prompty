@@ -2,10 +2,13 @@ import json
 from promptflow.core import tool
 from promptflow.core import Prompty
 from promptflow.client import PFClient
-from promptflow.connections import AzureOpenAIConnection, OpenAIConnection
+from promptflow.tracing import start_trace
 
 from pathlib import Path
 folder = Path(__file__).parent.absolute().as_posix()
+
+# start a trace session, and print a url for user to check trace
+start_trace()
 
 @tool
 def flow_entry(    

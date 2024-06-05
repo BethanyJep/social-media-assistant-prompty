@@ -16,5 +16,5 @@
         }
     ],
     "python.terminal.activateEnvironment": true,
-    "prompty.currentModelConfiguration": "default"
+    "prompty.currentModelConfiguration": "gpt-3.5-turbo"
 }
