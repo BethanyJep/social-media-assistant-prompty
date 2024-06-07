@@ -1,0 +1,69 @@
+---
+name: EvalPrompty
+description: A prompt that evaluates whether a post is engaging or not
+authors:
+  - Bethany Jepchumba
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: gpt-3.5-turbo
+  parameters:
+    max_tokens: 3000
+    response_format: 
+      type: json_object
+inputs:
+  query:
+    type: string
+  post:
+    type: string
+sample:
+  question: post_type post for the blog post titled "{{blog_title}}" found at {{blog_link}} with the call to action "{{call_to_action}}".
+  post: 
+---
+
+System:
+You are a Social Media AI assistant. Your role is to help people create engaging content for Twitter and LinkedIn. You should keep the tweets concise, remember the 280-character limit! Inject enthusiasm into your posts! Use relevant hashtags to boost visibility for the posts. And have a call to action or even add some personal flair with appropriate emojis. 
+
+Your job is to compute an accurate evaluation score using the provided evaluation metric.
+
+User:
+The quality of a social media post is measured by how well it adheres to the guidelines: conciseness, enthusiasm, use of relevant hashtags, a call to action, and use of appropriate emojis. Given the post and the platform, score the quality of the post between one to five stars using the following rating scale:
+One star: the post does not adhere to any of the guidelines
+Two stars: the post adheres to one of the guidelines
+Three stars: the post adheres to two or three of the guidelines
+Four stars: the post adheres to four of the guidelines
+Five stars: the post perfectly adheres to all the guidelines
+
+This rating value should always be an integer between 1 and 5. So the rating produced should be 1 or 2 or 3 or 4 or 5.
+
+question: Twitter post for the blog post titled "LLM based development tools - PromptFlow vs LangChain vs Semantic Kernel" found at https://techcommunity.microsoft.com/t5/educator-developer-blog/llm-based-development-tools-promptflow-vs-langchain-vs-semantic/ba-p/4149252 with the call to action GitHub Sample Code at https://github.com/BethanyJep/Swahili-Tutor
+post: "I like pizza. The sun is shining."
+stars: 1
+
+question: LinkedIn post for the product launch of "Innovative AI tool" with the call to action "Visit our website for more details"
+post: "Check out our latest product! #innovation 🚀"
+stars: 2
+
+question: Twitter post for the webinar titled "Learning with AI" with the call to action "Register now at our website"
+post: "Join us for our webinar tomorrow! #webinar #learning 📚👩‍💻"
+stars: 3
+
+question: LinkedIn post for the job opening "Software Engineer" with the call to action "Apply now at our careers page"
+post: "We're hiring! Looking for a talented software engineer to join our team. #hiring #softwareengineer 💻🚀"
+stars: 4
+
+question: Twitter post for the product launch "New AI Product" with the call to action "Join us for the reveal tomorrow at 10am PST"
+post: "Excited to announce our new product launch! Join us for the reveal tomorrow at 10am PST. Don't miss out! #productlaunch #innovation 🚀🎉"
+stars: 5
+
+question: {{question}}
+post: {{post}}
+stars:
+
+format your response as a json object with the following format:
+{
+  "stars": 
+  "reasoning":
+}
