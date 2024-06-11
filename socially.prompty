@@ -7,7 +7,7 @@ model:
   api: chat
   configuration:
     type: azure_openai
-    azure_endpoint: gpt-3.5-turbo
+    azure_endpoint: ${env:OPENAI_ENDPOINT}
     azure_deployment: gpt-35-turbo
   parameters:
     max_tokens: 3000
